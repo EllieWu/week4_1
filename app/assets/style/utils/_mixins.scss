@@ -1,0 +1,314 @@
+@mixin pad{
+    @media (max-width:992px){
+        @content;
+    }
+}
+@mixin header{
+    @media(min-width:992px){
+        @content;
+    }
+}
+@mixin mobile{
+    @media (max-width:575px){
+        @content;
+    }
+}
+@mixin footer{
+    @media (min-width:577px){
+        @content;
+    }
+}
+
+@include header{
+    .headerMenuRWD{
+        display: none;
+    }
+    }
+    
+
+@include footer{
+    .footerContact-m{
+        display: none;
+    }
+}
+
+@include pad{
+    .header{
+        .header-box{
+            justify-content: center;
+        }
+        .headerMenu{
+            display: none;
+        }
+        .headerMenuRWD{
+           ul{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            li{
+                width: 48%;
+                padding: 12px 0;
+                border: 1px solid white;
+                a{
+                    text-decoration: none;
+                    color:white;
+                    
+                }
+            }
+        } 
+        } 
+        
+    }
+    .container{
+        max-width: 720px;
+    }
+    .banner{
+        background-size: 992px 787px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header-sm.png");
+        height: 787px;
+    }
+    .homeSection-box{
+        .content{
+            .item{
+                width: 48%;
+            }
+            .mb48{
+                margin-bottom: 48px;
+            }
+        }
+        
+    }
+    .sectionContent{
+        .contentImg{
+            .content-item{
+                width: 100%;
+                .mb24{
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        
+    }
+    .content-glasses{
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg-sm.png");
+        height: 960px;
+        .glasses-box{
+            justify-content: center;
+            .glasses-item img{
+                width: 696px;
+            }
+                .mb24{
+                    margin-bottom: 24px;
+                }
+        }
+    }
+    .customer{
+        &-item{
+            width: 48%;
+        }
+        .customer-item-box{
+            justify-content: space-between;
+        }
+    }
+    
+    
+    .contact-box{
+        .contact-form{
+            width: 576px;
+            p{
+                font-size: 16px;
+                line-height: 24px;
+            }
+            input{
+                width: 576px;
+            }
+            textarea{
+                width: 576px;
+            }
+            .click-btn{
+                padding: 16px 136px;
+            }
+        }
+    }
+    .footer{
+        .footerNav{
+            .menu{
+                li{
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile{
+    .header{
+        .headerMenu ul{
+            display: none;
+        }
+    }
+    .container{
+        max-width: 347px;
+    }
+    .banner{
+        background-size: 576px 396px;
+        height: 396px;
+        .bannerTextBox{
+            padding-top: 144px;
+          h1{
+            font-size: 16px;
+            line-height: 24px;
+            }  
+            p{
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }   
+    }
+    .homeSection-box{
+      .homeSection{
+        padding: 40px 0;
+        h2{
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }  
+    .content{
+        .item{
+            width: 100%;
+        }
+    }
+    .mb48{
+        margin-bottom: 48px;
+    }
+    }
+    .sectionContent{
+        margin-bottom: 48px;
+        .contentImg{
+            .content-item img{
+                width: 348px;
+            }
+        }
+        h2{
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+    .content-glasses{
+        height: 820px;
+        padding-top: 40px;
+        
+        h2{
+            padding-top: 0;
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 24px;
+        }
+        .glasses-box{
+            .glasses-item img{
+                width: 348px;
+                height: 240px;
+            }
+        }
+    }
+    .customer{
+        margin-bottom: 40px;
+        &-item{
+            width: 100%;
+        }
+        h2{
+            font-size: 24px;
+            line-height: 36px;
+        }
+        .customer-box{
+            margin-bottom: 0;
+                .customer-item-box{
+                margin-bottom: 16px;
+                width: auto;
+                }
+        }
+    }
+    .contact-box{
+        padding-top: 40px;
+        h2{
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 24px;
+        }
+        .contact-form{
+            width: 348px;
+            input{
+                width: 348px;
+                padding: 6px 0;
+            }
+            textarea{
+                width: 348px;
+                padding: 6px 0;
+            }
+        }
+        
+    }
+    .checkbox-li{
+        margin-bottom: 16px;
+    }
+    .footer{
+        padding-top: 24px;
+        .footerNav{
+            padding-bottom: 24px;
+            border-bottom: 1px solid white;
+            margin-bottom: 16px;
+        .menu{
+            display: none;
+            
+        }
+        .menuImg{
+            justify-content: flex-end;
+            height: 54px;
+            li{
+                padding: 0 10px;
+            }
+            img{
+                width: 24px;
+            }
+        }
+        .footerContact-m{
+            li{
+                margin-bottom: 8px;
+            }
+            li i{
+                color:white;
+            }
+            li a{
+                text-decoration: none;
+                color:white;
+            }
+        }
+    }
+    .footerContent{
+        display: none;
+        a{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .font-awesome{
+            font-size: 24px;
+        }
+    }
+    .footerCopyright{
+        flex-direction: column;
+        align-items: flex-start;
+        p{
+            margin-bottom: 8px;
+        }
+        .copyright-ul{
+            flex-direction: column;
+            & li{
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+    }
+    
